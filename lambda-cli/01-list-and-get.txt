@@ -1,0 +1,6 @@
+aws --version
+aws lambda list-functions
+aws lambda get-function --function-name test
+
+Reference Doc:
+https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lambda/list-functions.html

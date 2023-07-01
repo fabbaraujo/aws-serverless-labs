@@ -1,0 +1,14 @@
+Get Role:
+aws iam get-role --role-name lambda-example
+
+arn:aws:iam::{ACCOUNT_ID}:role/lambda-example
+
+Run Command:
+
+windows:
+aws lambda create-function \
+    --function-name my-function2 \
+    --runtime nodejs14.x \
+    --zip-file fileb://function.zip \
+    --handler index.handler \
+    --role arn:aws:iam::{ACCOUNT_ID}:role/lambda-example

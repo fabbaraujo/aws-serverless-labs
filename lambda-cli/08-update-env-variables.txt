@@ -1,0 +1,6 @@
+Configuring environment variables with the API
+aws lambda update-function-configuration --function-name test-3 \
+    --environment "Variables={BUCKET=test,KEY=file.txt}"
+
+Run Command:
+aws lambda get-function-configuration --function-name test-3

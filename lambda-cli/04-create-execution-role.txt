@@ -1,0 +1,9 @@
+aws iam create-role --role-name lambda-example --assume-role-policy-document '{"Version": "2012-10-17","Statement": [{ "Effect": "Allow", "Principal": {"Service": "lambda.amazonaws.com"}, "Action": "sts:AssumeRole"}]}'
+
+-------
+With passing trusted-policy json file:
+aws iam create-role --role-name lambda-example --assume-role-policy-document file://04-trust-policy.json
+
+-------
+AWSLambdaBasicExecutionRole managed policy:
+aws iam attach-role-policy --role-name lambda-example --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
